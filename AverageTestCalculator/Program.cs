@@ -4,9 +4,6 @@ namespace AverageTestCalculator
 {
     internal class Program
     {
-        static int sum = 0;
-        static int students = 0;
-        static string input = "";
         static void Main(string[] args)
         {
             Console.WriteLine("The average is: " + AverageCalculator());
@@ -20,6 +17,10 @@ namespace AverageTestCalculator
         /// <returns></returns>
         public static double AverageCalculator()
         {
+            double sum = 0;
+            int students = 0;
+            string input = "";
+
             while (!input.Equals("-1"))
             {
                 Console.WriteLine("Please Enter -1 to stop and get the average.");
@@ -49,7 +50,7 @@ namespace AverageTestCalculator
             }
             if (students > 0)
             {
-                return sum/students;
+                return (double)sum/(double)students;
             }
             else
             {
